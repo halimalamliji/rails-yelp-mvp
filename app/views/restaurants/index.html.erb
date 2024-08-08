@@ -1,0 +1,16 @@
+<div class="border-bottom border-weight-2 my-3">
+  <h1 class="mb-3">All restaurants</h1>
+</div>
+<div class="d-flex flex-column row">
+  <% @restaurants.each do |restaurant| %>
+    <div class="card p-2 m-2 col-3">
+    <%= link_to restaurant.name, restaurant_path(restaurant) %>
+    </div>
+  <% end %>
+</div>
+
+<div class="my-3">
+  <%= link_to new_restaurant_path do %>
+    <i class="fa-solid fa-square-plus"></i> Add a new restaurant
+  <% end %>
+</div>
